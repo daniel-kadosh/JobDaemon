@@ -21,12 +21,12 @@ of PHP re-compiling the application into bytecode.  In other words,
 use of an autoloader will reduce efficiency when launching new child
 processes.
 
-There are only 3 methods to integrate with your application:
-1) loadConfig(): Optional, to load or update any app configuration.
-2) getNextJob(): Called before launching a child process, to return either
-                 metadata about the next job, or NULL if no job ready.
-3) childRun(): Entrypoint for your application to run a job, given the
-               metadata from above.
+There are only 3 methods to integrate with your application:  
+1. loadConfig(): Optional, to load or update any app configuration.  
+2. getNextJob(): Called before launching a child process, to return either
+                 metadata about the next job, or NULL if no job ready.  
+3. childRun(): Entrypoint for your application to run a job, given the
+               metadata from above.  
 
 Your application must extend the JobDaemon class, instantiate it,
 optionally call some methods to tweak settings (like setMaxChildren),
